@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<host-apdu-service
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:description="@string/hce_service_description"
+    android:requireDeviceUnlock="false">
+
+    <!--
+        ISO-DEP tabanlı erişim kontrol sistemleri için AID grupları.
+        "other" kategorisi: ödeme dışı kullanım (bina girişi vb.)
+    -->
+    <aid-group
+        android:description="@string/hce_service_description"
+        android:category="other">
+        <!-- Genel erişim kontrolü AID'leri -->
+        <aid-filter android:name="A0000000041010" />
+        <aid-filter android:name="A000000003101001" />
+        <aid-filter android:name="A0000000031010" />
+        <aid-filter android:name="D2760000850100" />
+        <aid-filter android:name="D2760000850101" />
+    </aid-group>
+</host-apdu-service>
